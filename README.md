@@ -12,3 +12,4 @@ And sometimes using different versions of `Bootstrap`, mainly `v4` & `v5`.
 
 - Pages when created looked and worked fine.
 - But due to different dependencies/links pages may look different after some time.
+- All the CSS stylings are included in the HTML document.
