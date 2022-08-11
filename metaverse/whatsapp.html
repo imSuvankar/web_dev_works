@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" type="image/icon type">
+    <title>WhatsApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #128C7E !important;
+        }
+
+        .navbar a {
+            color: white !important;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        nav .wpBrand {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .navbar-brand img {
+            position: relative;
+            top: -3px;
+            padding-right: 1%;
+        }
+
+        .dropdown-menu a {
+            color: black !important;
+        }
+
+        .container .row {
+            margin-top: 85px;
+        }
+
+        .texts h2 {
+            font-size: 2.35rem;
+            font-weight: 400;
+        }
+
+        .texts p:nth-of-type(1) {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .texts p:nth-of-type(2) {
+            color: rgb(100, 100, 100);
+            padding-top: 2%;
+        }
+
+        .lists li,
+        .external li {
+            list-style-type: none;
+            font-size: 1.2rem;
+            padding: 2% 0;
+            color: #128C7E;
+        }
+
+        .lists li a {
+            text-decoration: none;
+            padding: 0 2% 0 3%;
+            color: #128C7E;
+        }
+
+        .lists .iconify {
+            position: relative;
+            top: -2px;
+        }
+
+        .external a {
+            font-size: 1.35rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .external #insta span {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #8a3ab9, #e95950, #bc2a8d, #fbad50, #cd486b, #4c68d7);
+        }
+
+        .external #fb {
+            color: #1778f2;
+        }
+
+        .external #messenger span {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #1778f2, #3c8dff, #1dbbff);
+        }
+
+        .external a span:hover {
+            text-shadow: 0 0 10px rgb(173, 173, 173);
+            transition: 0.2s ease-in-out;
+        }
+
+        .external ul {
+            box-shadow: 0 0 15px #ddd;
+        }
+
+        .secondSec p {
+            font-size: 1.15rem !important;
+        }
+
+        .secondSec h5 {
+            color: rgb(114, 114, 114);
+            font-size: 0.97rem;
+            font-weight: 600;
+            letter-spacing: 0.5mm;
+        }
+
+        .secondSec h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .features button {
+            font-size: 1.05rem;
+            font-weight: 500;
+            border: 2px solid;
+            padding: 1% 3%;
+            border-radius: 35px;
+            border-color: #1ab9a69f;
+            color: #075e54e5;
+            transition: 0.3s ease-in-out;
+        }
+
+        .features button:hover {
+            background-color: #128C7E;
+            color: white;
+            transition: 0.25s ease-in-out;
+        }
+
+        footer {
+            color: rgba(255, 255, 255, 0.5);
+            background-color: #222e3c;
+            font-size: 1.15rem;
+        }
+
+        footer h6 {
+            margin: 0 0 12px 0;
+            color: white;
+            padding-bottom: 15px;
+            font-size: large;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        footer ul a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .social {
+            text-align: center;
+        }
+
+        footer .copyright {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width:767px) {
+            footer .item {
+                text-align: center;
+                margin-bottom: 5% ;
+            }
+
+            footer ul {
+                text-align: center;
+            }
+
+            footer .text {
+                text-align: center;
+            }
+
+            footer .social {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-light py-3 mb-1 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt="" width="38" height="38"
+                    class="d-inline-block me-1">
+                <span class="wpBrand">
+                    WhatsApp
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-5 my-1 ps-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-4 me-2" aria-current="page" href="#">WHATSAPP WEB</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 me-2" href="#">FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 me-2" href="#">DOWNLOAD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 me-2" href="#">SECURITY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 me-2" href="#">HELP</a>
+                    </li>
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="iconify" data-icon="mdi:web" data-width="25" data-height="25"></span>
+                            EN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">বাংলা</a></li>
+                            <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                            <li><a class="dropdown-item" href="#">اردو</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12 col-lg-2 d-none d-lg-block">
+            </div>
+            <div class="col-12 col-lg-5 mt-5 pt-5 pe-5 texts">
+                <h2 class="pb-4">Simple. Secure.<br>Reliable messaging.</h2>
+                <p>With WhatsApp, you'll get fast, simple, secure messaging and calling for free*, available on phones
+                    all over the world.</p>
+                <p>* Data charges may apply. Contact your provider for details.</p>
+                <ul class="lists ps-0">
+                    <li>
+                        <span class="iconify" data-icon="ant-design:android-filled"></span> <a href="#">Android
+                        </a><span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+                    </li>
+                    <li>
+                        <span class="iconify" data-icon="ant-design:apple-filled"></span> <a href="#">iPhone </a><span
+                            class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+                    </li>
+                    <li>
+                        <span class="iconify" data-icon="ic:baseline-desktop-mac"></span> <a href="#">Mac or Windows PC
+                        </a><span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-3 mt-5 p-0 d-flex justify-content-end d-none d-lg-block">
+                <img src="https://scontent.whatsapp.net/v/t39.8562-34/178505650_460141378430025_2455877548463147186_n.png?ccb=1-5&_nc_sid=2fbf2a&_nc_ohc=PB_6Gzs_xTIAX_vbKgl&_nc_ht=scontent.whatsapp.net&oh=a869d9112db75ef033376c666ffa144f&oe=617F834C"
+                    width="96%" height="auto" alt="img">
+            </div>
+            <div class="col-12 col-lg-2 d-flex align-items-end justify-content-center pe-0 ps-3">
+                <div class="external mt-4 mb-2">
+                    <ul class="border p-4 border-1 rounded-3">
+                        <li>
+                            <a href="facebook_login.html" target="_blank" id="fb"><span>facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="instagram.html" target="_blank" id="insta"><span>Instagram</span></a>
+                        </li>
+                        <li>
+                            <a href="messenger.html" target="_blank" id="messenger"><span>Messenger</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center secondSec">
+        <div class="col-12 col-md-6 pe-3">
+            <div class="pt-4 px-5" style="background-color: #d8e7ea;">
+                <h2 class="pt-5">WhatsApp Business App</h2><br>
+                <p><a href="#" class="text-decoration-none">WhatsApp Business</a> is a free to download app that was
+                    built with the small business owner in mind.
+                    Create a catalog to showcase your products and services. Connect with your customers easily by using
+                    tools to automate, sort and quickly respond to messages.</p>
+                <p>WhatsApp can also help medium and large businesses provide customer support and deliver important
+                    notifications to customers. Learn more about <a href="#" class="text-decoration-none">WhatsApp
+                        Business API</a>.</p>
+                <img src="https://scontent.whatsapp.net/v/t39.8562-34/191731900_491358315413361_6968938602217354245_n.png?ccb=1-5&_nc_sid=2fbf2a&_nc_ohc=JcMNtXnegLkAX_fqjXi&_nc_ht=scontent.whatsapp.net&oh=25a2a55b33d7018d1ce0272ae66b9d2b&oe=61835530"
+                    width="51%" height="auto" alt="img1" class="mt-5">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 ps-3">
+            <div class="px-5 py-5" style="background-color: #e6f0e5;">
+                <img src="data:image/png;base64,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"
+                    alt="img2" width="42%" height="auto" class="my-5 pb-5">
+                <h5>END-TO-END ENCRYPTION</h5>
+                <h2>Security by Default</h2><br>
+                <p>Some of your most personal moments are shared on WhatsApp, which is why we built end-to-end
+                    encryption into the latest versions of our app. When end-to-end encrypted, your messages and calls
+                    are secured so only you and the person you're communicating with can read or listen to them, and
+                    nobody in between, not even WhatsApp.</p>
+            </div>
+        </div>
+    </div>
+
+    <center class="features my-5">
+        <button type="button" class="btn">
+            EXPLORE FEATURES
+        </button>
+    </center>
+
+    <!-- FOOTER -->
+    <footer class="pt-5"
+        <div class="container">
+            <div class="row ps-5">
+                <div class="col-md-3 item">
+                    <h6>WHATSAPP</h6>
+                    <ul class="p-0">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Whatsapp Web</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 item">
+                    <h6>COMPANY</h6>
+                    <ul class="p-0">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Brand Center</a></li>
+                        <li><a href="#">Get in touch</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">WhatsApp Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 item">
+                    <h6><b>DOWNLOAD</b></h6>
+                    <ul class="p-0">
+                        <li><a href="#">Mac/PC</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">iPhone</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 item">
+                    <h6><b>HELP</b></h6>
+                    <ul class="p-0">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Coronavirus</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright my-1 py-4 bg-dark">2021 © WhatsApp LLC</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
