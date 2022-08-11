@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Suvankar Das, 1/Sept/2021">
+    <meta name="description" content="Sign Up page for an imaginary book selling website.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alumni+Sans&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url(https://i.ibb.co/B6Mb4b4/org-picseditor-blurbackground-2021831214059849.png);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Special Elite', cursive;
+            color: black;
+            font-size: 20px;
+            user-select: none;
+        }
+
+        #mainNav {
+            height: 50px;
+        }
+
+        .navbar-brand #book {
+            font-family: 'Alumni Sans', sans-serif;
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+        .navbar-brand #ish {
+            font-family: 'Alex Brush', cursive;
+            font-size: 45px;
+        }
+
+        .navbar.scrolled {
+            background-image: linear-gradient(90deg, #16120d, #2c1e11, #5d2906, #855e42, #d2a774, #d7bc97, #e0cbaf, white);
+            /* transition: background 400ms; */
+        }
+
+        #loginText {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        #title {
+            font-size: 1.4rem;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 10px 15px black;
+        }
+
+        #content {
+            background-color: rgba(255, 255, 255, 0.675);
+        }
+
+        #star {
+            color: red;
+        }
+
+        .form-control {
+            color: black !important;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #submit:hover {
+            border-color: #358f35;
+            background-color: #358f35;
+            transition: background 0.3s ease-in-out;
+        }
+
+        #goTopBtn {
+            display: none;
+            position: fixed;
+            border: none;
+            padding: 15px 20px 5px 20px;
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            bottom: 37px;
+            right: 40px;
+            cursor: pointer;
+        }
+
+        #goTopBtn:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+    <title>SignUp</title>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light bg-transperant fixed-top py-0" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: white;">
+                <span id="book">B<i>O</i>OK</span><span id="ish">ish</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <span class="navbar-text ml-auto">
+                    <span class="pr-3" id="loginText">Already Have An Account ?</span> <button type="button"
+                        class="btn btn-success btn-sm ">Login</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADING -->
+    <div class="row pt-5">
+        <div class="col-sm-12 col-lg-2"></div>
+        <div class="col-sm-12 col-lg-8">
+            <div id="title">
+                <h1 class="display-4 mb-0 pt-5">Tell Us About Yourself</h1>
+                <p>
+                    ( "<span id="star"><b>*</b></span>" Marked Fields Are Mandatory )
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-2"></div>
+    </div>
+
+    <!-- FORM -->
+    <div class="row pt-3">
+        <div class="col-sm-12 col-lg-2"></div>
+        <div class="col-sm-12 col-lg-8 px-5 py-5 mb-5 border rounded-lg" id="content">
+            <form action="#" method="POST">
+                <!-- Name Section -->
+                <div class="form-row pb-2 mt-0">
+                    <div class="form-group col-sm-12 col-md-4">
+                        <label for="firstName">First Name <span id="star"><b>*</b></span></label>
+                        <input type="text" class="form-control" id="firstName" placeholder="eg. Sheldon"
+                            pattern="[a-zA-Z]*" title="Please enter first name (only alphabets)." required>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-4">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" class="form-control" id="middleName" placeholder="eg. Lee"
+                            pattern="[a-zA-Z]*" title="Please enter middle name (only alphabets).">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-4">
+                        <label for="lastName">Last Name <span id="star"><b>*</b></span></label>
+                        <input type="text" class="form-control" id="lastName" placeholder="eg. Cooper"
+                            pattern="[a-zA-Z]*" title="Please enter last name (only alphabets)." required>
+                    </div>
+                </div>
+                <!-- DOB -->
+                <div class="form-group mb-2">
+                    <label for="dob">Date Of Birth <span id="star"><b>*</b></span></label>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" id="date" placeholder="Date" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" id="date" placeholder="Month" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" id="date" placeholder="Year" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gender -->
+                <div class="form-group mb-0">
+                    <label for="gender">Gender <span id="star"><b>*</b></span></label>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="male">Male</label>
+                            <input id="male" name="gender" type="radio" value="male" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="female">Female</label>
+                            <input id="female" name="gender" type="radio" value="female">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="others">Others</label>
+                            <input id="others" name="gender" type="radio" value="others">
+                        </div>
+                    </div>
+                </div>
+                <!-- Ph. No. -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phNo">Phone Number <span id="star"><b>*</b></span></label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+91</div>
+                            </div>
+                            <input type="text" class="form-control" id="phNo" placeholder="eg. 6677889900"
+                                pattern="[6-9]{1}[0-9]{9}" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="altPhNo">Alternate Phone Number</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+91</div>
+                            </div>
+                            <input type="text" class="form-control" id="altPhNo" placeholder="eg. 6677889900"
+                                pattern="[6-9]{1}[0-9]{9}">
+                        </div>
+                    </div>
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="state" placeholder="State">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="zipCode" placeholder="Zip Code"
+                                pattern="[0-9]{1}[0-9]{5}" required>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="delivery">
+                        <label class="form-check-label" for="delivery">
+                            Use This As Your Default Delivery Address.
+                        </label>
+                    </div>
+                </div>
+                <!-- Email ID -->
+                <div class="form-row">
+                    <div class="form-group col-md-6 pb-2">
+                        <label for="email">Email ID <span id="star"><b>*</b></span></label>
+                        <input type="email" class="form-control" id="email" placeholder="eg. abc@ijk.xy" required>
+                    </div>
+                    <div class="form-group col-md-6 pb-2">
+                        <label for="altEmail">Alternate Email ID</label>
+                        <input type="email" class="form-control" id="altEmail" placeholder="eg. abc@ijk.xy">
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phNo">Password <span id="star"><b>*</b></span></label>
+                        <div class="input-group mb-2">
+                            <input type="password" class="form-control" id="password1" placeholder="Password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least 6 or more characters with at least one uppercase letter, one lowercase letter and one number."
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="altPhNo">Re-type Password <span id="star"><b>*</b></span></label>
+                        <div class="input-group mb-2">
+                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least 6 or more characters with at least one uppercase letter, one lowercase letter and one number."
+                                required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter -->
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter">
+                        <label class="form-check-label" for="newsletter">
+                            Receive Our Weekly Newsletters On New Book Reliese, Gift Ideas, Discounts, Author
+                            Announcements & More On Your Email.
+                        </label>
+                    </div>
+                </div>
+                <!-- Agreement -->
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agreement" required>
+                        <label class="form-check-label" for="agreement">
+                            I Accept The <a href="#">Terms & Conditions</a> and I have read the <a href="#">Privacy
+                                Policy</a>. <span id="star"><b>*</b></span>
+                        </label>
+                    </div>
+                </div>
+                <!-- SignUp Button -->
+                <div class="pt-4">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-12 col-lg-2"></div>
+        <br>
+        <br>
+    </div>
+
+    <!-- Go To Top Button -->
+    <button onclick="topFunction()" id="goTopBtn" title="Go to top" class="border rounded-circle"><i
+            class="fas fa-arrow-up"></i></button>
+
+    <!-- Additional JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+    <!-- :: DECLARATION ::
+    The following few lines are a bunch of JavaScript Codes.
+    Till now I've no idea what these are or what they actually do as I'm in the learning phase right now.
+    But the page looks good with these so straight away copy-pasted from the web and decided to keep.
+    But we can always get rid of those. Peace. -->
+
+    <!-- JS for scrolling navbar effect -->
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNav");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+    <!-- JS for Scroll Top Button-->
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("goTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+
+</body>
+
+</html>
