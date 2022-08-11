@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Suvankar Das / Sept 30, 2021">
+    <title>Send An Email</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: dodgerblue;
+        }
+
+        .container {
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #name,
+        #email,
+        #subject,
+        #message {
+            border-radius: 18px;
+            background-color: #ddd;
+
+        }
+
+        #name::placeholder,
+        #email::placeholder,
+        #subject::placeholder,
+        #message::placeholder {
+            font-size: 0.8rem;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media (max-width:767px) {
+            .container {
+                zoom: 70%;
+            }
+
+            img {
+                zoom: 80%;
+            }
+
+            .px-5 {
+                zoom: 120%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg-light">
+        <div class="row p-5">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <img src="https://theofficersacademy.com/image/img-01.png" alt="image" width="350px">
+            </div>
+            <div class="col-12 col-md-6 px-5">
+                <center>
+                    <h4 class="mb-4">Get in touch</h4>
+                </center>
+                <form>
+                    <input type="text" class="form-control mb-4" id="name" placeholder="Name">
+                    <input type="email" class="form-control mb-4" id="email" placeholder="Email">
+                    <input type="text" class="form-control mb-4" id="subject" placeholder="Subject">
+                    <textarea class="form-control mb-4" id="message" rows="3" placeholder="Message"></textarea>
+                    <center>
+                        <button type="submit" class="btn border-success rounded-pill btn-success">Send Email →</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

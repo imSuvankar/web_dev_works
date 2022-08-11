@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="calc.css"> -->
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4cViMl1iLLY2iHqwUS3eWit37iZWKIhaPg&usqp=CAU);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        td {
+            text-align: center;
+            border: 1.5px solid rgba(255, 255, 255, 0.096);
+            font-weight: bold;
+            font-size: 21px;
+            padding: 24px 24px;
+        }
+
+        #result {
+            text-align: end;
+        }
+
+        td:hover {
+            background-color: rgb(100, 36, 129);
+        }
+
+        #result:hover {
+            background-color: transparent;
+        }
+
+        .sign {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+    </style>
+
+    <title>Calculator</title>
+</head>
+
+<body class="pb-4">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-transperant container">
+        <a class="navbar-brand" href="#"><i class="fas fa-calculator pr-3"></i>Calculator</a>
+    </nav>
+
+    <!-- HEADING -->
+    <h1 class="display-4 pt-3 pb-4">The Calculator</h1>
+
+    <!-- TABLE -->
+    <table>
+        <thead>
+            <tr>
+                <td colspan="4" id="result" title="Display">0</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="sign" title="All Clear">AC</td>
+                <td class="sign" title="Backspace"><i class="fas fa-backspace"></i></td>
+                <td class="sign" title="Percentage"><i class="fas fa-percentage"></i></td>
+                <td class="sign" title="Divide"><i class="fas fa-divide"></i></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td class="sign" title="Multiple"><i class="fas fa-times"></i></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td class="sign" title="Minus"><i class="fas fa-minus"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td class="sign" title="Plus"><i class="fas fa-plus"></i></td>
+            </tr>
+            <tr>
+                <td title="Advanced Options"><i class="fas fa-exchange-alt"></i></td>
+                <td>0</td>
+                <td>.</td>
+                <td class="sign" title="Equal"><i class="fas fa-equals"></i></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
