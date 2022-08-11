@@ -2,7 +2,7 @@
 
 This repository contains all the major web development works I have done.
 
-These are created usin only `HTML3` and `CSS5`.
+These are created usin only `HTML` and `CSS`.
 
 And sometimes using different versions of `Bootstrap`, mainly `v4` & `v5`.
 
